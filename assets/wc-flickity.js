@@ -1,5 +1,6 @@
 jQuery(function() {
 	var $slider_primary = jQuery('.wcfg-primary-gallery');
+    jQuery.fn.prettyPhoto();
 	if ( $slider_primary.length < 1 ) return;
 
 	// -----
@@ -46,13 +47,14 @@ jQuery(function() {
 		var g_titles = gallery.titles.slice(cellIndex).concat( gallery.titles.slice(0, cellIndex) );
 		var g_descriptions = gallery.descriptions.slice(cellIndex).concat( gallery.descriptions.slice(0, cellIndex) );
 
-		jQuery.prettyPhoto.open( g_images, g_titles, g_descriptions );
-	});
+        jQuery.prettyPhoto.open( g_images, g_titles, g_descriptions );
+    });
+    // console.log(prettyPhoto);
 
 
 	// -----
 	// Create a secondary slider to use as navigation, with thumbnails
-	var $slider_nav = jQuery('.wcfg-nav-gallery');
+    var $slider_nav = jQuery('.wcfg-nav-gallery');
 
 	if ( $slider_nav.length > 0 ) {
 		$slider_nav.flickity({
